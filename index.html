@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background: #ff914d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        header img {
+            width: 50px;
+            height: 50px;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        .services {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .service {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            background: #fff;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-weight: normal;
+        }
+        .service.active .dropdown-content {
+            display: block;
+        }
+        .contact-form {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ff914d;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #ff914d;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact-form button:hover {
+            background: #e07b3e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="C:\Users\eliza\Documents\pet site 3\logo_pet4.jpg" alt="PetPros Logo"> 
+        <span></span>
+    </header>
+    
+    <section>
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                🐾 Enclosures Setups & Maintenance
+                <div class="dropdown-content">
+                    <p>We design, install, and maintain pet enclosures to ensure a safe and comfortable environment.
+<ul>
+  <dt>Aquariums set up</dt>
+<dd>fresh water</dd>
+<dd>salt water</dd>
+<dd>maintenance</dd> 
+
+  <li>Terrariums set up</li>
+  <li>Milk</li>
+</ul></p>
+                </div>
+            </div>
+            <div class="service">
+                🚗 Transportation Services
+                <div class="dropdown-content">
+                    <p>Safe and comfortable pet transportation for vet visits, grooming, and travel needs.</p>
+                </div>
+            </div>
+            <div class="service">
+                ✂️ Training & Grooming
+                <div class="dropdown-content">
+                    <p>Professional pet training and grooming services to keep your pets happy and healthy.</p>
+                </div>
+            </div>
+            <div class="service">
+                🏡 Pet Sitting
+                <div class="dropdown-content">
+                    <p>Reliable pet sitting services while you're away, ensuring your pets are safe and well cared for.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section>
+        <h2>Contact Us</h2>
+        <a href="mailto:rivera.petpros@gmail.com">Send Email</a>
+        <p>Or call us: 813-419-7176</p>
+    </section>
+
+    <script>
+        document.querySelectorAll('.service').forEach(service => {
+            service.addEventListener('click', () => {
+                service.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
